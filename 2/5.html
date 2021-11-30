@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+
+	function mathOperation(arg1, arg2, operation) {
+		let a = arg1;
+		let b = arg2;
+		switch(operation) {
+			case '+':
+				console.log(getSum(a, b));
+			case '-':
+				console.log(getDiff(a, b));
+			case '*':
+				console.log(getMult(a, b));
+			case '/':
+				console.log(getSegment(a, b));
+		}
+	}
+			
+	mathOperation(5, 8, "+")
+
+	
+	/**	
+	 * Функция складывает два переданных числа
+	 * @param {number} a - первое число для сложения в функции
+	 * @param {number} a - второе число для сложения в функции
+	 * @return {number} - возвращает результат сложения двух чисел
+	 */
+	function getSum(a, b) {
+		return a + b;
+	}
+
+	/**	
+	 * Функция вычисляет разность двух переданных чисел
+	 * @param {number} a - первое число уменьшаемое в функции
+	 * @param {number} a - второе число вычитаемое в функции
+	 * @return {number} - возвращает разность двух чисел
+	 */
+	 function getDiff(a, b) {
+		if (a > b) {
+			return a - b;
+		 } 
+			return b - a; 
+	 }
+	
+	 /**	
+	 * Функция вычисляет произведение двух переданных чисел
+	 * @param {number} a - первое число множитель в функции
+	 * @param {number} a - второе число множитель в функции
+	 * @return {number} - возвращает произведение двух чисел
+	 */
+	 function getMult(a, b) {
+		 return a * b;
+	 }
+
+
+	 /**	
+	 * Функция вычисляет деление двух переданных чисел
+	 * @param {number} a - первое число делимое в функции
+	 * @param {number} a - второе число делитель в функции
+	 * @return {number} - возвращает частность двух чисел
+	 */
+	 function getSegment(a, b) {
+		 return a / b;
+	 }
+
+
+
+</script>
+</body>
+</html>
