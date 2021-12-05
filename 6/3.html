@@ -42,15 +42,6 @@
   */
   const stars = document.querySelectorAll('.fa-star');
   document.querySelector('.stars_container').addEventListener('mouseover', e => {
-    if (!e.target.classList.contains('fas')) {
-      return;
-    }
-    let star = e.target;
-    do {
-      star.classList.add('golden');
-      star = star.previousElementSibling;
-    } while (star);
-
   });
 
 
@@ -68,7 +59,6 @@
       star.classList.remove('golden');
       star = star.previousElementSibling;
     } while (star);
-
   });
 
   /*

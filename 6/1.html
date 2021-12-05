@@ -22,17 +22,17 @@
 -->
 <div class="product">
   <div class="productName">Товар 1</div>
-    <img src="http://lorempixel.com/200/300/food/1/" alt="">
+  <img src="http://lorempixel.com/200/300/food/1/" alt="">
   <button>В корзину</button>
 </div>
 <div class="product">
   <div class="productName">Товар 2</div>
-    <img src="http://lorempixel.com/200/300/food/2/" alt="">
+  <img src="http://lorempixel.com/200/300/food/2/" alt="">
   <button>В корзину</button>
 </div>
 <div class="product">
   <div class="productName">Товар 3</div>
-    <img src="http://lorempixel.com/200/300/food/3/" alt="">
+  <img src="http://lorempixel.com/200/300/food/3/" alt="">
   <button>В корзину</button>
 </div>
 
@@ -57,8 +57,9 @@
 
   document.body.addEventListener('click', (e) => {
     const button = e.target;
-    if (button.tagName !== 'BUTTON')
+    if (button.tagName !== 'BUTTON') {
       return;
+    }
     button.textContent = 'Добавлено';
     button.disabled = true;
   });
